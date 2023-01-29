@@ -1,0 +1,39 @@
+version: '3'
+services:
+    isa-onlypoems-db:
+      image: mariadb:10.4.4
+      container_name: isa-onlypoems-db-dev
+      restart: unless-stopped
+      environment:
+        - MYSQL_USER=root
+        - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+        - MYSQL_ROOT_PASSWORD=
+        - MYSQL_DATABASE=onlypoems
+      command: mysqld --lower_case_table_names=1 --skip-ssl --character_set_server=utf8mb4 --explicit_defaults_for_timestamp --default_time_zone=-03:00 --net-read-timeout=60 --net-write-timeout=120 --max-allowed-packet=536870912 --wait-timeout=1850 --interactive-timeout=1850
+      networks:
+        - isa-onlypoems-backend-dev
+      volumes:
+        - mariadb-isa-onlypoems:/var/lib/mysql
+
+    isa-onlypoems-backend:
+      image: jhipster/jhipster
+      container_name: isa-onlypoems-backend-dev
+      restart: unless-stopped
+      depends_on:
+        - isa-onlypoems-db
+      ports:
+        - '8080:8080'
+        - '9000:9000'
+        - '3001:3001'
+      networks:
+        - isa-onlypoems-backend-dev
+      volumes:
+        - ~/Facultad/Ingenieria-Software-Aplicada/onlypoems:/home/jhipster/app
+        - ~/Facultad/Ingenieria-Software-Aplicada/onlypoems/.m2:/home/jhipster/.m2
+
+networks:
+  isa-onlypoems-backend-dev:
+    driver: 'bridge'
+
+volumes:
+  mariadb-isa-onlypoems:
