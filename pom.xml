@@ -593,6 +593,14 @@
                         </from>
                         <to>
                             <image>onlypoems:latest</image>
+                            <tags>
+                                <tag>${project.version}</tag>
+                                <tag>latest</tag>
+                            </tags>
+                            <auth>
+                                <username>${martinr2020}</username>
+                                <password>${martin_enzo}</password>
+                            </auth>
                         </to>
                         <container>
                             <entrypoint>
