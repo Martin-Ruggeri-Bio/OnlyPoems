@@ -598,8 +598,8 @@
                                 <tag>latest</tag>
                             </tags>
                             <auth>
-                                <username>${DOCKER_REGISTRY_USER}</username>
-                                <password>${DOCKER_REGISTRY_PWD}</password>
+                                <username>martinr2020</username>
+                                <password>martin_enzo</password>
                             </auth>
                         </to>
                         <container>
