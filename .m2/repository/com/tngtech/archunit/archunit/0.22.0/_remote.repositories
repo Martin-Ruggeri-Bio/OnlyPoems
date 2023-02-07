@@ -1,4 +1,6 @@
 #NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
-#Tue Jan 24 14:41:37 GMT 2023
+#Sun Jan 29 20:48:52 GMT 2023
 archunit-0.22.0.jar>central=
+archunit-0.22.0-sources.jar>central=
 archunit-0.22.0.pom>central=
+archunit-0.22.0-javadoc.jar>central=

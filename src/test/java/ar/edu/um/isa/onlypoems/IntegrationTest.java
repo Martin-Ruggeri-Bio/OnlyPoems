@@ -1,6 +1,5 @@
 package ar.edu.um.isa.onlypoems;
 
-import ar.edu.um.isa.onlypoems.OnlypoemsApp;
 import ar.edu.um.isa.onlypoems.config.AsyncSyncConfiguration;
 import ar.edu.um.isa.onlypoems.config.EmbeddedSQL;
 import java.lang.annotation.ElementType;
