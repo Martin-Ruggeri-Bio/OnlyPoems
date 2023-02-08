@@ -592,14 +592,14 @@
                             </platforms>
                         </from>
                         <to>
-                            <image>onlypoems:latest</image>
+                            <image>martinr2020/onlypoems:latest</image>
                             <tags>
                                 <tag>${project.version}</tag>
                                 <tag>latest</tag>
                             </tags>
                             <auth>
-                                <username>martinr2020</username>
-                                <password>martin_enzo</password>
+                                <username>${DOCKER_REGISTRY_USER}</username>
+                                <password>${DOCKER_REGISTRY_PWD}</password>
                             </auth>
                         </to>
                         <container>
