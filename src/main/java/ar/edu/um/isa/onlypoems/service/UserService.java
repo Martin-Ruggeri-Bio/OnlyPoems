@@ -53,6 +53,11 @@ public class UserService {
         this.cacheManager = cacheManager;
     }
 
+    public List<User> searchUser(String query) {
+        log.debug("Searching users that match the query : {}", query);
+        return userRepository.findAllByLoginOrFirstNameOrLastName(query, query, query);
+    }
+
     public Optional<User> activateRegistration(String key) {
         log.debug("Activating user for activation key {}", key);
         return userRepository
@@ -123,7 +128,7 @@ public class UserService {
         newUser.setImageUrl(userDTO.getImageUrl());
         newUser.setLangKey(userDTO.getLangKey());
         // new user is not active
-        newUser.setActivated(false);
+        newUser.setActivated(true);
         // new user gets registration key
         newUser.setActivationKey(RandomUtil.generateActivationKey());
         Set<Authority> authorities = new HashSet<>();

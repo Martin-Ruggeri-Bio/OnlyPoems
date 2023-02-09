@@ -1,4 +1,6 @@
 #NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
-#Tue Jan 24 14:41:37 GMT 2023
+#Thu Feb 09 13:12:27 GMT 2023
 spring-boot-configuration-processor-2.7.2.pom>central=
 spring-boot-configuration-processor-2.7.2.jar>central=
+spring-boot-configuration-processor-2.7.2-javadoc.jar>central=
+spring-boot-configuration-processor-2.7.2-sources.jar>central=
